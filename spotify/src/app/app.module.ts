@@ -8,10 +8,15 @@ import { APP_ROUTING } from './app.routes';
 //Servicios
 import { SpotifyService } from './services/spotify.service';
 
+//Pipes
+import { SinfotoPipe } from './pipes/sinfoto.pipe';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { ArtistaComponent } from './components/artista/artista.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +24,9 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
     HomeComponent,
     SearchComponent,
     NavbarComponent,
+    SinfotoPipe,
+    ArtistaComponent,
+    DomseguroPipe
 
   ],
   imports: [

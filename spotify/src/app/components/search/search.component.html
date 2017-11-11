@@ -2,22 +2,29 @@
 
   <div class="row">
 
-
     <div class="col-md-3">
-        <label for="termino">Buscador de artistas</label>
-
-      <input [(ngModel)]="termino"
-      class="form-control"
-       type="text" name="termino" placeholder="Buscar por artista...">
-       <hr>
+        <label for="termino">Buscador de Artistas</label>
+        <input
+            [(ngModel)]="termino"
+            (keyup)="buscarArtista()"
+            type="text"
+            name="termino"
+            value=""
+            placeholder="Buscar por artista..."
+            class="form-control"> <!-- no se manda el termino en la funcion pq tiene el ngmodel-->
+            <hr>
     </div>
-    <div class="col-md-9">
-      <br>
-      <h2>Busqueda para: {{ termino }}</h2>
+    <div class="col-md-9">  <!-- *ngFor="let artista of _spotifyService.artistas" -->
+      <div class="row">
+        <div class="col-md-3 text-center puntero"
+          [routerLink]="['/artista', artista.id]"
+          *ngFor="let artista of _spotifyService.artistas">
+          <img [src]="artista.images | sinfoto" alt="" class="img-fluid img-thumbnail"> <!-- ? si existe, ponle la url -->
+          <p>{{ artista.name }}</p><hr>
+        </div>
 
+      </div>
     </div>
-
-
 
   </div>
 
