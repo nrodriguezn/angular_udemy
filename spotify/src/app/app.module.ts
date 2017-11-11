@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 import { APP_ROUTING } from './app.routes';
 
@@ -17,11 +18,13 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
     AppComponent,
     HomeComponent,
     SearchComponent,
-    NavbarComponent
+    NavbarComponent,
+
   ],
   imports: [
     BrowserModule,
     HttpModule,
+    FormsModule,
     APP_ROUTING
   ],
   providers: [

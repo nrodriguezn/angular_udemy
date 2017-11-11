@@ -9,6 +9,8 @@ import { SpotifyService } from '../../services/spotify.service';
 })
 export class SearchComponent implements OnInit {
 
+  termino:string = "" ;
+
   constructor( private _spotifyService:SpotifyService) { }
 
   ngOnInit() {
