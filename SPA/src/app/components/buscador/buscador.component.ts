@@ -12,8 +12,7 @@ export class BuscadorComponent implements OnInit {
   termino:string;
 
   constructor( private activatedRoute:ActivatedRoute,
-                private _heroesService: HeroesService) {
-  }
+                private _heroesService: HeroesService) { }
 
   ngOnInit() {
     this.activatedRoute.params.subscribe( params => {
