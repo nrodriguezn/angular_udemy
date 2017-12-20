@@ -9,7 +9,7 @@ export class SpotifyService {
   urlBusqueda:string = "https://api.spotify.com/v1/search";
   urlArtista:string = "https://api.spotify.com/v1/artists";
   urlToken:string= "https://accounts.spotify.com/api/token"
-  token:string = "BQARQbNjE9m-WSEe-Y0EB_GDrKr5NdetBNCsjdBNh5xIq-aywSpVsHXvpjndkew6zxm173AmkuRy2CKsdTrkdg"
+  token:string = "BQBJ3yROyKmajaaT1CZmWvfw2r-69VF-RSltLFV54WVltI5HIjrao5vdm703Qfsl9xpMyyNUkWqQWncKA6BJYw"
 
   constructor( private http:Http ) { }
 

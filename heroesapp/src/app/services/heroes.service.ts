@@ -9,10 +9,21 @@ export class HeroesService {
 
   fireURL:string="https://heroesapp-ec47d.firebaseio.com/heroe.json"
   heroeURL:string="https://heroesapp-ec47d.firebaseio.com/heroe"
-
+  public apiUrl:string = 'https://fletes-portales.herokuapp.com/api'
 
   constructor(private http:Http) { }
 
+//application
+public test(){
+let url = `${this.apiUrl}/setsesion`
+let headers = new Headers({
+  'Content-Type':'application/json',
+  'Access-Control-Allow-Origin': 'http://localhost:4200'
+})
+return this.http.get(url, {headers})
+.map(res => res.json())
+
+}
 
 
 //FIREBASE

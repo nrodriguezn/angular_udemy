@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HeroesService } from '../../services/heroes.service';
 
+
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
@@ -10,6 +11,7 @@ export class HeroesComponent implements OnInit {
 
   heroes:any[] = []
   loading:boolean = true
+  public apiUrl:string = 'https://fletes-portales.herokuapp.com/api'
 
   constructor(private _heroesService:HeroesService) {
     this._heroesService.getHeroes()
@@ -33,6 +35,13 @@ export class HeroesComponent implements OnInit {
           delete this.heroes[key$];
         }
       })
+  }
+
+  test(){
+    this._heroesService.test()
+    .subscribe(dato => {
+      console.log(dato)
+    })
   }
 
 }
